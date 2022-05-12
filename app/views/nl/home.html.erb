@@ -1,0 +1,283 @@
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="relative bg-white overflow-hidden">
+  <div class="hidden sm:block sm:absolute sm:inset-y-0 sm:h-full sm:w-full" aria-hidden="true">
+    <div class="relative h-full max-w-7xl mx-auto">
+      <svg class="absolute right-full transform translate-y-1/4 translate-x-1/4 lg:translate-x-1/2" width="404" height="784" fill="none" viewBox="0 0 404 784">
+        <defs>
+          <pattern id="f210dbf6-a58d-4871-961e-36d5016a0f49" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="4" height="4" class="text-yellow-200" fill="currentColor" />
+          </pattern>
+        </defs>
+        <rect width="404" height="784" fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)" />
+      </svg>
+      <svg class="absolute left-full transform -translate-y-3/4 -translate-x-1/4 md:-translate-y-1/2 lg:-translate-x-1/2" width="404" height="784" fill="none" viewBox="0 0 404 784">
+        <defs>
+          <pattern id="5d0dd344-b041-4d26-bec4-8d33ea57ec9b" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+            <rect x="0" y="0" width="4" height="4" class="text-yellow-200" fill="currentColor" />
+          </pattern>
+        </defs>
+        <rect width="404" height="784" fill="url(#5d0dd344-b041-4d26-bec4-8d33ea57ec9b)" />
+      </svg>
+    </div>
+  </div>
+
+  <div class="relative pt-6 pb-16 sm:pb-24">
+    <div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <nav class="relative flex items-center justify-between sm:h-10 md:justify-center" aria-label="Global">
+          <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
+            <div class="flex items-center justify-between w-full md:w-auto">
+              <a href="#">
+                <span class="sr-only">Workflow</span>
+                <img class="h-8 w-auto sm:h-10" src="https://res.cloudinary.com/the-ruby-lab/image/upload/v1652309224/3_w436ke.png" alt="">
+              </a>
+              <div class="-mr-2 flex items-center md:hidden">
+                <button type="button" class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
+                  <span class="sr-only">Open main menu</span>
+                  <!-- Heroicon name: outline/menu -->
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="hidden md:flex md:space-x-10 font-playfair">
+            <a href="/nl/hrconsulting" class="font-xl text-gray-500 hover:text-gray-900">HR Consulting</a>
+
+            <a href="#" class="font-xl text-gray-500 hover:text-gray-900">Digital Consulting</a>
+
+            <a href="#" class="font-xl text-gray-500 hover:text-gray-900">Over ons</a>
+
+            <a href="#" class="font-xl text-gray-500 hover:text-gray-900">Contact</a>
+          </div>
+          <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
+            <span class="inline-flex rounded-md shadow">
+              <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-yellow-600 hover:bg-gray-900"> Toegang klanten </a>
+            </span>
+          </div>
+        </nav>
+      </div>
+
+      <!--
+        Mobile menu, show/hide based on menu open state.
+
+        Entering: "duration-150 ease-out"
+          From: "opacity-0 scale-95"
+          To: "opacity-100 scale-100"
+        Leaving: "duration-100 ease-in"
+          From: "opacity-100 scale-100"
+          To: "opacity-0 scale-95"
+      -->
+      <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+        <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+          <div class="px-5 pt-4 flex items-center justify-between">
+            <div>
+              <img class="h-8 w-auto" src="https://res.cloudinary.com/the-ruby-lab/image/upload/v1652309224/3_w436ke.png" alt="">
+            </div>
+            <div class="-mr-2">
+              <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                <span class="sr-only">Close menu</span>
+                <!-- Heroicon name: outline/x -->
+                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="px-2 pt-2 pb-3">
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-xl text-gray-700 hover:text-gray-900 hover:bg-gray-50">Product</a>
+
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Features</a>
+
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Marketplace</a>
+
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Company</a>
+          </div>
+          <a href="#" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"> Toegang klanten </a>
+        </div>
+      </div>
+    </div>
+
+    <main class="mt-16 mx-auto max-w-7xl px-4 sm:mt-24">
+      <div class="text-center">
+        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+          <span class="block xl:inline font-playfair">Eliama & Otileo</span>
+        </h1>
+        <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl font-raleway">Voordeel behalen en uw bedrijf vooruit helpen vereist ervaring en vooruitziendheid. Wij kunnen u helpen de beste beslissingen te nemen om uw groei op gang te brengen.</p>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="bg-white">
+  <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
+    <div>
+      <h2 class="text-base font-semibold text-yellow-600 uppercase tracking-wide font-raleway">HR en Digitale Consulting</h2>
+      <p class="mt-2 text-3xl font-extrabold text-gray-900 font-playfair">Ben je op zoek naar</p>
+    </div>
+    <div class="mt-12 lg:mt-0 lg:col-span-2 font-raleway">
+      <dl class="space-y-10 sm:space-y-0 sm:grid sm:grid-cols-2 sm:grid-rows-4 sm:grid-flow-col sm:gap-x-6 sm:gap-y-10 lg:gap-x-8">
+        <div class="relative">
+          <dt>
+            <!-- Heroicon name: outline/check -->
+            <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="black" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+            </svg>
+            <p class="ml-9 text-lg leading-6 font-bold text-gray-900 font-playfair">Digitale impact</p>
+          </dt>
+        </div>
+
+        <div class="relative">
+          <dt>
+            <!-- Heroicon name: outline/check -->
+            <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="black" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+            </svg>
+            <p class="ml-9 text-lg leading-6 font-bold text-gray-900 font-playfair">UX optimalisatie</p>
+          </dt>
+        </div>
+
+        <div class="relative">
+          <dt>
+            <!-- Heroicon name: outline/check -->
+            <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="black" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+            </svg>
+            <p class="ml-9 text-lg leading-6 font-bold text-gray-900 font-playfair">Groei en Competitief voordeel</p>
+          </dt>
+        </div>
+
+        <div class="relative">
+          <dt>
+            <!-- Heroicon name: outline/check -->
+            <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="black" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+            </svg>
+            <p class="ml-9 text-lg leading-6 font-bold text-gray-900 font-playfair">Technologische transformatie</p>
+          </dt>
+        </div>
+
+        <div class="relative">
+          <dt>
+            <!-- Heroicon name: outline/check -->
+            <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="black" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+            </svg>
+            <p class="ml-9 text-lg leading-6 font-bold text-gray-900 font-playfair">Innovatie stimuleren</p>
+          </dt>
+        </div>
+
+        <div class="relative">
+          <dt>
+            <!-- Heroicon name: outline/check -->
+            <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="black" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+            </svg>
+            <p class="ml-9 text-lg leading-6 font-bold text-gray-900 font-playfair">Applicaties voor interne processen</p>
+          </dt>
+        </div>
+
+        <div class="relative">
+          <dt>
+            <!-- Heroicon name: outline/check -->
+            <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="black" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+            </svg>
+            <p class="ml-9 text-lg leading-6 font-bold text-gray-900 font-playfair">HR Advies en Strategie</p>
+          </dt>
+        </div>
+
+        <div class="relative">
+          <dt>
+            <!-- Heroicon name: outline/check -->
+            <svg class="absolute h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="black" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 5l7 7-7 7M5 5l7 7-7 7" />
+            </svg>
+            <p class="ml-9 text-lg leading-6 font-bold text-gray-900 font-playfair">Mobiele applicaties</p>
+          </dt>
+        </div>
+      </dl>
+    </div>
+  </div>
+</div>
+
+
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="bg-black">
+  <div class="max-w-7xl mx-auto text-center py-12 px-4 sm:px-6 lg:py-16 lg:px-8">
+    <h2 class="text-3xl font-extrabold font-playfair tracking-tight text-white sm:text-4xl">
+      <span class="block">Ontdek onze diensten</span>
+    </h2>
+    <div class="mt-8 flex justify-center">
+      <div class="inline-flex rounded-md shadow">
+        <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-700"> HR Consulting</a>
+      </div>
+      <div class="ml-3 inline-flex">
+        <a href="#" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-700"> Digital Consulting </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!--
+  This example requires Tailwind CSS v2.0+ 
+  
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/aspect-ratio'),
+    ],
+  }
+  ```
+-->
+<div class="relative py-16 bg-white">
+  <div class="hidden absolute top-0 inset-x-0 h-1/2 bg-gray-50 lg:block" aria-hidden="true"></div>
+  <div class="max-w-7xl mx-auto bg-indigo-600 lg:bg-transparent lg:px-8">
+    <div class="lg:grid lg:grid-cols-12">
+      <div class="relative z-10 lg:col-start-1 lg:row-start-1 lg:col-span-4 lg:py-16 lg:bg-transparent">
+        <div class="absolute inset-x-0 h-1/2 bg-gray-50 lg:hidden" aria-hidden="true"></div>
+        <div class="max-w-md mx-auto px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:p-0">
+          <div class="aspect-w-10 aspect-h-6 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-1">
+            <img class="object-cover object-center rounded-3xl shadow-2xl" src="https://images.unsplash.com/photo-1507207611509-ec012433ff52?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=934&q=80" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="relative bg-black lg:col-start-3 lg:row-start-1 lg:col-span-10 lg:rounded-3xl lg:grid lg:grid-cols-10 lg:items-center">
+        <div class="hidden absolute inset-0 overflow-hidden rounded-3xl lg:block" aria-hidden="true">
+          <svg class="absolute bottom-full left-full transform translate-y-1/3 -translate-x-2/3 xl:bottom-auto xl:top-0 xl:translate-y-0" width="404" height="384" fill="none" viewBox="0 0 404 384" aria-hidden="true">
+            <defs>
+              <pattern id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <rect x="0" y="0" width="4" height="4" class="text-indigo-500" fill="currentColor" />
+              </pattern>
+            </defs>
+            <rect width="404" height="384" fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)" />
+          </svg>
+          <svg class="absolute top-full transform -translate-y-1/3 -translate-x-1/3 xl:-translate-y-1/2" width="404" height="384" fill="none" viewBox="0 0 404 384" aria-hidden="true">
+            <defs>
+              <pattern id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                <rect x="0" y="0" width="4" height="4" class="text-indigo-500" fill="yellow" />
+              </pattern>
+            </defs>
+            <rect width="404" height="384" fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)" />
+          </svg>
+        </div>
+        <div class="relative max-w-md mx-auto py-12 px-4 space-y-6 sm:max-w-3xl sm:py-16 sm:px-6 lg:max-w-none lg:p-0 lg:col-start-4 lg:col-span-6">
+          <h2 class="text-3xl font-extrabold text-white font-playfair" id="join-heading">Waarom E&O</h2>
+          <p class="text-lg text-white font-raleway">Wij zijn een groep van adviseurs die menselijke vindingrijkheid, ervaring en technologische innovatie combineren om duurzame resultaten te leveren en vertrouwen op te bouwen.</p>
+          <a class="block w-full py-3 px-5 text-center bg-white border border-transparent rounded-md shadow-md text-base font-medium text-yellow-600 hover:bg-gray-50 sm:inline-block sm:w-auto" href="#">Vertel ons hoe wij kunnen helpen?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
