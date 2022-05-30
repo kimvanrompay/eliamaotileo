@@ -12,6 +12,7 @@ module.exports = {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
         playfair: ['Playfair Display', 'serif'],
         raleway: ['Raleway', 'sans-serif'],
+        libre: ['Libre Barcode 39', 'cursive'],
       },
     },
   },

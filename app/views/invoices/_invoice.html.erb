@@ -1,0 +1,103 @@
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="bg-white mt-5 shadow overflow-hidden sm:rounded-lg">
+  <div class="px-4 py-7 sm:px-6">
+    <img class="h-10 w-auto sm:h-12" src="https://res.cloudinary.com/the-ruby-lab/image/upload/v1652309224/3_w436ke.png" alt="">
+    <h3 class="text-2xl font-raleway text-gray-900">FACTUUR <%= invoice.fnummer %></h3>
+    <p class="mt-3 max-w-2xl text-sm text-gray-500"><%= invoice.datum %></p>
+    <p class="mt-1 max-w-2xl text-sm text-gray-500">Factuurdatum: 25/05/2022</p>
+    <p class="mt-1 max-w-2xl text-sm text-gray-500">Vervaldatum: 26/05/2022</p>
+    <p class="mt-1 max-w-2xl text-sm text-gray-500 font-libre">Code: <%= invoice.barcode %></p>
+  </div>
+  <div class="border-t border-gray-200 px-4 py-5 sm:px-6">
+    <dl class="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
+      <div class="sm:col-span-1 font-raleway">
+        <dt class="text-md text-yellow-600 font-bold">Eliama & Otileo BV</dt>
+        <dd class="mt-1 text-sm text-gray-900">BE 0785.992.879</dd>
+        <dd class="mt-1 text-sm text-gray-900">Zavelstraat 84</dd>
+        <dd class="mt-1 text-sm text-gray-900">3010, Leuven</dd>
+      </div>
+      <div class="sm:col-span-1 font-raleway">
+        <dt class="text-md text-yellow-600 font-bold"><%= invoice.bedrijfsnaam %></dt>
+        <dd class="mt-1 text-sm text-gray-900">BE 0845.093.395</dd>
+        <dd class="mt-1 text-sm text-gray-900"><%= invoice.adres1 %></dd>
+        <dd class="mt-1 text-sm text-gray-900"><%= invoice.postcode %>, <%= invoice.stad %></dd>
+      </div>
+      <div class="sm:col-span-1">
+        <dt class="text-sm font-medium text-gray-500">Email address</dt>
+        <dd class="mt-1 text-sm text-gray-900">finance@eliamaotileo.com</dd>
+      </div>
+      <div class="sm:col-span-1">
+        <dt class="text-sm font-medium text-gray-500">Email boekhouding</dt>
+        <dd class="mt-1 text-sm text-gray-900"><%= invoice.email %></dd>
+      </div>
+      <div class="sm:col-span-2">
+        <dt class="text-sm font-medium text-gray-500">Beschrijving</dt>
+        <dd class="mt-1 text-sm text-gray-900"><%= invoice.beschrijving %></dd>
+      </div>
+      <div class="sm:col-span-2">
+        <dt class="text-sm font-medium text-gray-500">Bedragen</dt>
+        <dd class="mt-1 text-sm text-gray-900">
+          <ul role="list" class="border border-gray-200 rounded-md divide-y divide-gray-200">
+            <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+              <div class="w-0 flex-1 flex items-center">
+                <span class="ml-2 flex-1 w-0 truncate"> Subtotaal: <%= invoice.bedragexcl %> EUR</span>
+              </div>
+            </li>
+            <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm">
+              <div class="w-0 flex-1 flex items-center">
+                <span class="ml-2 flex-1 w-0 truncate"> 21% BTW: <%= invoice.btw %> EUR</span>
+              </div>
+            </li>
+            <li class="pl-3 pr-4 py-3 flex items-center justify-between text-sm bg-black">
+              <div class="w-0 flex-1 flex items-center">
+                <span class="ml-2 flex-1 w-0 truncate font-bold text-white"> Totaal: <%= invoice.bedragincl %> EUR</span>
+              </div>
+            </li>
+          </ul>
+        </dd>
+      </div>
+            <div class="sm:col-span-2">
+        <dt class="text-sm font-medium text-gray-500">Opmerkingen</dt>
+        <dd class="mt-1 text-sm text-gray-900"> <%= invoice.opmerkingen %></dd>
+      </div>
+    </dl>
+  </div>
+</div>
+  
+  <!-- This example requires Tailwind CSS v2.0+ -->
+<div class="bg-red-50 shadow overflow-hidden sm:rounded-lg">
+  <div class="px-4 py-5 sm:px-6">
+    <h3 class="text-lg leading-6 font-medium text-gray-900">Betaaldetails van begunstigde Eliama & Otileo BV</h3>
+    <p class="mt-1 max-w-2xl text-sm text-gray-500">Factuur te betalen voor <strong>26/05/2022</strong></p>
+  </div>
+  <div class="border-t border-gray-200">
+    <dl>
+      <div class="bg-red-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium text-gray-500">Rekeningnummer bij KBC</dt>
+        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">BE38 7340 6011 7272<br>KREDBEBB</dd>
+      </div>
+      <div class="bg-red-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium text-gray-500">Te betalen bedrag</dt>
+        <dd class="mt-1 text-sm text-gray-900 font-bold sm:mt-0 sm:col-span-2"><%= invoice.bedragincl %> EUR</dd>
+      </div>
+      <div class="bg-red-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+        <dt class="text-sm font-medium text-gray-500">In mededeling zetten</dt>
+        <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2"><%= invoice.barcode %></dd>
+      </div>
+    </dl>
+  </div>
+</div>
+
+  
+  
+  <div>
+
+  <% if action_name != "show" %>
+    <%= link_to "Show this invoice", invoice, class: "rounded-lg  inline-block font-medium" %>
+    <%= link_to 'Edit this invoice', edit_invoice_path(invoice), class: "rounded-lg py-3 ml-2 px-5 inline-block font-medium" %>
+    <%= link_to 'Betaling boeken', edit_invoice_path(invoice), class: "rounded-lg py-3 ml-2 px-5 inline-block font-medium text-green-500" %>
+    <%= link_to 'Crediteren', edit_invoice_path(invoice), class: "rounded-lg py-3 ml-2 px-5 inline-block font-medium text-red-500" %>
+    <%= link_to 'Herinneren', edit_invoice_path(invoice), class: "rounded-lg py-3 ml-2 px-5 inline-block font-medium" %>
+    <hr class="mt-6">
+  <% end %>
+</div>
