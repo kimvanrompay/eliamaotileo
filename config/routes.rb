@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :invoices
-  get 'nl/home'
-  get 'nl/diensten'
+  root "nl#home"
+  get 'watdoenwe' => 'nl/diensten'
   get 'nl/digitalconsulting'
   get 'nl/sectoren'
   get 'nl/overons'
