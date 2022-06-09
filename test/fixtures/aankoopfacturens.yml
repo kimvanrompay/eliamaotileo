@@ -1,0 +1,45 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bedrijfsnaam: MyString
+  adres: MyString
+  land: MyString
+  postcode: MyString
+  btw: MyString
+  klantnummer: MyString
+  factuurnummer: MyString
+  description: MyText
+  excl_bedrag: 1
+  factuurdatum: 2022-06-08
+  vervaldatum: 2022-06-08
+  rekeningnummer: MyString
+  begunstigde: MyString
+  mededeling: MyString
+  factuur_mail: MyString
+  betaald: false
+  bevestigd: false
+  recurrent: false
+  opmerking: MyText
+  staving: MyText
+
+two:
+  bedrijfsnaam: MyString
+  adres: MyString
+  land: MyString
+  postcode: MyString
+  btw: MyString
+  klantnummer: MyString
+  factuurnummer: MyString
+  description: MyText
+  excl_bedrag: 1
+  factuurdatum: 2022-06-08
+  vervaldatum: 2022-06-08
+  rekeningnummer: MyString
+  begunstigde: MyString
+  mededeling: MyString
+  factuur_mail: MyString
+  betaald: false
+  bevestigd: false
+  recurrent: false
+  opmerking: MyText
+  staving: MyText

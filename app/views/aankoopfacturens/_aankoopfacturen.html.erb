@@ -1,0 +1,20 @@
+<div id="<%= dom_id aankoopfacturen %>">
+  
+  <tbody class="divide-y divide-gray-200 bg-white">
+    <tr>
+      <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6"><%= aankoopfacturen.bedrijfsnaam %></td>
+      <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><%= ((aankoopfacturen.excl_bedrag)*1.21).truncate(2) %></td>
+      <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><%= aankoopfacturen.vervaldatum %></td>
+      <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><%= aankoopfacturen.betaald %></td>
+      <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><%= aankoopfacturen.bevestigd %></td>
+      <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+        <%= link_to "Bekijken", aankoopfacturen, class: "rounded-lg py-3 px-5 bg-gray-100 inline-block font-base" %>
+        <%= link_to 'Aanpassen', edit_aankoopfacturen_path(aankoopfacturen), class: "py-3 ml-2 px-5 inline-block font-base" %>
+      </td>
+    </tr>
+  </tbody>
+
+  
+</div>
+
+

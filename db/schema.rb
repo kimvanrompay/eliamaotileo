@@ -10,9 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_12_195357) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_08_201550) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "aankoopfacturens", force: :cascade do |t|
+    t.string "bedrijfsnaam"
+    t.string "adres"
+    t.string "land"
+    t.string "postcode"
+    t.string "btw"
+    t.string "klantnummer"
+    t.string "factuurnummer"
+    t.text "description"
+    t.integer "excl_bedrag"
+    t.date "factuurdatum"
+    t.date "vervaldatum"
+    t.string "rekeningnummer"
+    t.string "begunstigde"
+    t.string "mededeling"
+    t.string "factuur_mail"
+    t.boolean "betaald"
+    t.boolean "bevestigd"
+    t.boolean "recurrent"
+    t.text "opmerking"
+    t.text "staving"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "invoices", force: :cascade do |t|
     t.string "fnummer"

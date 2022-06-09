@@ -1,0 +1,2 @@
+class Aankoopfacturen < ApplicationRecord
+end
