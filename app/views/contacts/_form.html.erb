@@ -1,0 +1,37 @@
+<%= form_with(model: contact, class: "contents") do |form| %>
+  <% if contact.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+      <h2><%= pluralize(contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+        <% contact.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="m-5 font-raleway">
+    Goedemiddag consultant van Eliama & Otileo,
+        <br>
+            <br>
+    Mijn naam is <%= form.text_field :contactnaam, class: "underline-offset-8 px-3 py-1 m-2 border-yellow-500" %> van het bedrijf <%= form.text_field :bedrijfsnaam, class: "border-yellow-500 px-3 py-1 m-2" %>
+    <br>
+        <br>
+    Graag had ik met jullie besproken of jullie het volgende kunnen doen voor ons:
+    <br>
+        <br>
+    <%= form.text_area :onderwerp, rows: 4, class: "block shadow rounded-md border border-yellow-500 outline-none px-3 py-2 mt-2 w-full" %>
+    <br>
+    <br>
+    U mag me contacteren via mijn e-mail <%= form.text_field :email, class: "border-yellow-500 px-3 py-1 m-2" %> <br>of telefonisch op het nummer <%= form.text_field :tel, class: "border-yellow-500 px-3 py-1 m-2" %>
+    <br>
+    <br>
+    Alvast bedankt en tot snel.
+
+  </div>
+
+  <div class="inline m-5">
+    <%= form.submit "Verzenden", class: "font-raleway rounded-lg py-3 px-5 bg-yellow-600 text-white inline-block font-medium cursor-pointer" %>
+  </div>
+<% end %>

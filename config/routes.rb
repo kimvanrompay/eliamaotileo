@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :contacts
   resources :aankoopfacturens
   resources :invoices
   root "nl#home"

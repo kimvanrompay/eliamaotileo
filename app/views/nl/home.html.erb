@@ -28,10 +28,10 @@
           <div class="flex items-center flex-1 md:absolute md:inset-y-0 md:left-0">
             <div class="flex items-center justify-between w-full md:w-auto">
               <a href="#">
-                <span class="sr-only">Workflow</span>
+                <span class="sr-only">Eliama & Otileo</span>
                 <img class="h-8 w-auto sm:h-10" src="https://res.cloudinary.com/the-ruby-lab/image/upload/v1652309224/3_w436ke.png" alt="">
               </a>
-              <div class="-mr-2 flex items-center md:hidden">
+              <div class="-mr-2 flex items-center md:hidden" >
                 <button type="button" class="bg-gray-50 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-expanded="false">
                   <span class="sr-only">Open main menu</span>
                   <!-- Heroicon name: outline/menu -->
@@ -49,13 +49,9 @@
 
             <a href="#" class="font-xl text-gray-500 hover:text-gray-900">Over ons</a>
 
-            <a href="#" class="font-xl text-gray-500 hover:text-gray-900">Contact</a>
+            <a href="contacts/new" class="font-xl text-gray-500 hover:text-gray-900">Contact</a>
           </div>
-          <div class="hidden md:absolute md:flex md:items-center md:justify-end md:inset-y-0 md:right-0">
-            <span class="inline-flex rounded-md shadow">
-              <a href="#" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-yellow-600 hover:bg-gray-900"> Toegang klanten </a>
-            </span>
-          </div>
+
         </nav>
       </div>
 
@@ -69,32 +65,28 @@
           From: "opacity-100 scale-100"
           To: "opacity-0 scale-95"
       -->
-      <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
-        <div class="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
+      <div class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden" x-data="{ open: false }">
+        <div class="bg-white overflow-hidden">
           <div class="px-5 pt-4 flex items-center justify-between">
             <div>
               <img class="h-8 w-auto" src="https://res.cloudinary.com/the-ruby-lab/image/upload/v1652309224/3_w436ke.png" alt="">
             </div>
             <div class="-mr-2">
-              <button type="button" class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
-                <span class="sr-only">Close menu</span>
-                <!-- Heroicon name: outline/x -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+              <button @click="open = ! open" type="button" class="bg-white m-2 inline-flex items-center justify-center text-gray-400 hover:text-yellow-500 ">
+                <span class="sr-only"></span>
+                Menu
               </button>
             </div>
           </div>
-          <div class="px-2 pt-2 pb-3">
-            <a href="#" class="block px-3 py-2 rounded-md text-base font-xl text-gray-700 hover:text-gray-900 hover:bg-gray-50">Product</a>
+          <div x-show="open" @click.outside="open = false" class="px-2 pt-2 pb-3">
+            <a href="nl/hrconsulting" class="block px-3 py-2 rounded-md text-base font-xl text-gray-700 hover:text-white hover:bg-yellow-500">HR Consulting</a>
 
-            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Features</a>
+            <a href="nl/digitalconsulting" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-yellow-500">Digital Consulting</a>
 
-            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Marketplace</a>
+            <a href="nl/overons" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-yellow-500">Over ons</a>
 
-            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Company</a>
+            <a href="contacts/new" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-yellow-500">Contact</a>
           </div>
-          <a href="#" class="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"> Toegang klanten </a>
         </div>
       </div>
     </div>
@@ -104,7 +96,7 @@
         <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
           <span class="block xl:inline font-playfair">Eliama & Otileo</span>
         </h1>
-        <p class="mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl font-raleway">Voordeel behalen en uw bedrijf vooruit helpen vereist ervaring en vooruitziendheid. Wij kunnen u helpen de beste beslissingen te nemen om uw groei op gang te brengen.</p>
+        <p class="mt-3 max-w-md mx-auto text-xl text-gray-500 sm:text-2xl md:mt-5 md:text-2xl md:max-w-3xl font-raleway">We combineren hands-on expertise en diepgaande technische kennis over het hele spectrum van mensen en organisatieonderwerpen om u een complete en geïntegreerde oplossing te bieden. Alles op maat van de behoeften van uw organisatie.</p>
 
       </div>
     </main>
@@ -113,7 +105,7 @@
 
 <!-- This example requires Tailwind CSS v2.0+ -->
 <div class="bg-white">
-  <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
+  <div class="max-w-7xl mx-auto py-10 px-4 sm:px-6 lg:py-24 lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
     <div>
       <h2 class="text-base font-semibold text-yellow-600 uppercase tracking-wide font-raleway">HR en Digitale Consulting</h2>
       <p class="mt-2 text-3xl font-extrabold text-gray-900 font-playfair">Ben je op zoek naar</p>
